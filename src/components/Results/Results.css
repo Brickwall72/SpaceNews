@@ -1,0 +1,16 @@
+#Results {
+    margin-top: 30px;
+    overflow-y: scroll;
+    height: 80vh;
+    overflow-x: hidden;
+}
+#Results::-webkit-scrollbar {
+    width: 10px; /* width of the scrollbar */
+    background: #d7dadc10;
+    border-radius: 10px; /* roundness of the scrollbar */
+
+}
+#Results::-webkit-scrollbar-thumb {
+    background-color: #d7dadc; /* color of the scrollbar thumb */
+    border-radius: 10px; /* roundness of the scrollbar thumb */
+}

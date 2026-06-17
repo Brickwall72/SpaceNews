@@ -1,0 +1,14 @@
+.Result {
+    margin: 0px 20px 20px;
+    display: border-box;
+    border: 1px solid red;
+    border-radius: 10px;
+    width: 800px;
+    height: 200px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.Result:hover {
+    border: 1px solid green;
+}
