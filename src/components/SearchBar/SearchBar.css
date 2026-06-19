@@ -20,9 +20,10 @@
     color: white;
 }
 
-.clear-search-button {
-    margin-left: 10px;
-    padding: 0;
+#SearchBar > .clear-search-button {
+    position: relative;
+    width: 1em;
+    right: -8px;
     background-color: transparent;
     border: none;
     color: #d7dadc;
@@ -30,6 +31,26 @@
     cursor: pointer;
 }
 
-.clear-search-button:hover {
+#SearchBar > .clear-search-button:hover {
     color: #ff4500;
+    
+}
+
+#SearchBar > .clear-search-button:disabled {
+    color: transparent;
+    cursor: default;
+}
+
+#SearchBar > .search-button {
+    position: relative;
+    right: -12px;
+    margin-left: 5px;
+    width: 30px;
+    padding: 0;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    color: var(--primary-color);
+    background-color: var(--text-color);
+    font-size: 16px;
+    cursor: pointer;
 }

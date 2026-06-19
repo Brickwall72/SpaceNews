@@ -1,3 +1,7 @@
+:root {
+    --tile-color: color-mix(in srgb, var(--primary-color), white 2%);
+}
+
 #Results {
     margin-top: 30px;
     overflow-y: scroll;
@@ -6,11 +10,11 @@
 }
 #Results::-webkit-scrollbar {
     width: 10px; /* width of the scrollbar */
-    background: #d7dadc10;
+    background: var(--tile-color);
     border-radius: 10px; /* roundness of the scrollbar */
 
 }
 #Results::-webkit-scrollbar-thumb {
-    background-color: #d7dadc; /* color of the scrollbar thumb */
+    background-color: var(--text-color); /* color of the scrollbar thumb */
     border-radius: 10px; /* roundness of the scrollbar thumb */
 }

@@ -21,7 +21,8 @@ const SearchBar = () => {
       onChange={handleSearchChange} 
       onKeyDown={(e) => e.key === 'Enter' && handleSubmit()} 
       />
-      <button className="clear-search-button" onClick={clearSearch}>&times;</button>
+      <button className="clear-search-button" disabled={searchTerm === ''} onClick={clearSearch}>&times;</button>
+      <button className="search-button" >&rarr;</button>
     </div>
   );
 };

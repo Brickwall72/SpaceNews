@@ -18,7 +18,7 @@ const Results = () => {
                             &times;
                         </button>
                         <h2>Result Title</h2>
-                        <p className="detailed-view">Result description goes here...</p>
+                        <p className="detailed-view">lorem1000</p>
                     </div>
                 </div>
             )}
