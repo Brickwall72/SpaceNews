@@ -1,4 +1,6 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk, createAction } from '@reduxjs/toolkit';
+
+export const setSearchTerm = createAction('searchResults/setSearchTerm');
 
 export const fetchSearchResults = createAsyncThunk(
     'searchResults/fetch',
@@ -24,13 +26,21 @@ export const searchResultsSlice = createSlice({
     name: 'searchResults',
     initialState: {
         results: [],
+        searchTerm: '',
         isLoading: false,
         failedToLoad: false,
         errorMessage: null,
     },
-    reducers: {},
+    reducers: {
+        setSearchTerm: (state, action) => {
+            state.searchTerm = action.payload;
+        }
+    },
     extraReducers: (builder) => {
         builder
+            .addCase(setSearchTerm, (state, action) => {
+                state.searchTerm = action.payload;
+            })
             .addCase(fetchSearchResults.pending, (state) => {
                 state.isLoading = true;
                 state.failedToLoad = false;
@@ -49,6 +59,7 @@ export const searchResultsSlice = createSlice({
         }
 });
 
+export const selectSearchTerm = (state) => state.searchResults.searchTerm;
 export const selectSearchResults = (state) => state.searchResults.results;
 export const selectIsLoading = (state) => state.searchResults.isLoading;
 export const selectFailedToLoad = (state) => state.searchResults.failedToLoad;

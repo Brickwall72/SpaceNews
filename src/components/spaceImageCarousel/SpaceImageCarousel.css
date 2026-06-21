@@ -1,0 +1,35 @@
+#space-image-carousel {
+    width: 100vw;
+    overflow: hidden;
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    align-self: center;
+}
+
+.image-carousel-track {
+    display: flex;
+    gap: 20px;
+    animation: scrollMarquee 240s linear infinite;
+}
+
+.image-carousel-track:hover {
+    animation-play-state: paused;
+}
+
+.carousel-img {
+    height: 300px;
+    width: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+@keyframes scrollMarquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}

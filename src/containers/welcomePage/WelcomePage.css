@@ -1,0 +1,13 @@
+#WelcomePage {
+    justify-items: center;
+}
+
+#search-results-label {
+    justify-self: flex-start;
+    margin-left: 15px;
+}
+
+#SiteTitle {
+    color: var(--text-color);
+    text-decoration: none;
+}

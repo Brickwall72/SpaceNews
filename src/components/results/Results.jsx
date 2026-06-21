@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import Result from '../Result/Result.jsx';
+import Result from '../result/Result.jsx';
 import './Results.css';
 import { useSelector } from 'react-redux';
-import { selectSearchResults, selectIsLoading, selectFailedToLoad, selectErrorMessage } from '../../features/searchResultsSlice';
+import { selectSearchResults, selectIsLoading, selectFailedToLoad, selectErrorMessage } from '../../features/searchResultsSlice.js';
 
 const Results = () => {
     const [selectedItem, setSelectedItem] = useState(null);
