@@ -19,6 +19,7 @@
 
 .carousel-img {
     height: 300px;
+    max-height: 25vh;
     width: auto;
     border-radius: 8px;
     object-fit: cover;

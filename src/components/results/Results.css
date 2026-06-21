@@ -4,10 +4,14 @@
 
 #Results {
     margin-top: 30px;
-    overflow-y: scroll;
-    height: 80vh;
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    height: auto;
     overflow-x: hidden;
     max-width: 95%;
+    box-sizing: border-box;
+    padding-right: 12px;
     scrollbar-gutter: stable;
 }
 #Results::-webkit-scrollbar {

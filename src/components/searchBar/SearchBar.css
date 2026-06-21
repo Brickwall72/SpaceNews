@@ -1,6 +1,7 @@
 #SearchBar {
     display: flex;
     justify-self: center;
+    max-width: 90%;
     width: 400px;
     height: 25px;
     border-radius: 10px;

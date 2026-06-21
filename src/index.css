@@ -9,3 +9,14 @@ html {
     background-color: var(--primary-color);
     color: var(--text-color);
 }
+
+html,
+body,
+#root {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    overflow: hidden;
+}

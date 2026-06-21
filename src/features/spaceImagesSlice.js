@@ -26,7 +26,8 @@ const writeStoredImages = (images) => {
 export const fetchSpaceImages = createAsyncThunk(
     'spaceImages/fetchSpaceImages',
     async () => {
-        const response = await fetch('https://api.nasa.gov/planetary/apod?count=15&api_key=XNTHl9bRHBBd1aCfpieNzljl4Ent2sgErRn2bNur');
+        const MY_KEY = import.meta.env.VITE_NASA_KEY
+        const response = await fetch(`https://api.nasa.gov/planetary/apod?count=15&api_key=${MY_KEY}`);
         if (!response.ok) throw new Error('Failed to fetch from NASA API');
         const data = await response.json();
         const images = Array.isArray(data) ? data : [data];
