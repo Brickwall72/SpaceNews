@@ -25,6 +25,7 @@ function WelcomePage() {
             <h1><Link id="SiteTitle" onClick={clearSearch} to='/'>Space News</Link></h1>
             <SearchBar 
                 searchTerm={searchTerm}
+                setSearchTerm={setSearchTerm}
                 handleSearchChange={handleSearchChange}
                 clearSearch={clearSearch}
             />
