@@ -1,4 +1,4 @@
-.modal-backdrop {
+.modal .modal-backdrop {
     position: fixed;
     top: 0;
     left: 0;
@@ -11,7 +11,7 @@
     z-index: 1000;
 }
 
-.modal-content {
+.modal .modal-content {
     display: flex;
     flex-direction: column;
     background-color: var(--tile-color);
@@ -22,25 +22,31 @@
     height: auto;
     max-height: 60%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    
+    margin-bottom: 5px;
+    overflow-y: auto;
 }
 
-.modal-content>.detailed-view {
-    padding-right: 15px;
-    margin-bottom: 5px;
-    overflow-y: scroll;
+.modal .modal-content a {
+    color: var(--text-color);
+    text-decoration: underline;
+    pointer-events: auto;
 }
-.modal-content>.detailed-view::-webkit-scrollbar {
+
+.modal .modal-content  {
+    
+}
+.modal .modal-content::-webkit-scrollbar {
     width: 10px; /* width of the scrollbar */
     background: var(--primary-color);
     border-radius: 10px; /* roundness of the scrollbar */
 }
-.modal-content>.detailed-view::-webkit-scrollbar-thumb {
+.modal .modal-content::-webkit-scrollbar-thumb {
     background-color: var(--text-color); /* color of the scrollbar thumb */
     border-radius: 10px; /* roundness of the scrollbar thumb */
 }
 
-.modal-close-btn {
+.modal .modal-close-btn {
+    display: block;
     position: relative;
     align-self: flex-end;
     background-color: transparent;
@@ -50,6 +56,10 @@
     cursor: pointer;
 }
 
-.modal-close-btn:hover {
+.modal .modal-close-btn:hover {
     color: var(--accent-color);
+}
+
+.modal .summary {
+    display:contents;
 }

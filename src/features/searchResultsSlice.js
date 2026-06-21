@@ -7,18 +7,13 @@ export const fetchSearchResults = createAsyncThunk(
             return rejectWithValue('Search term cannot be empty');
         }
         try {
-            const url = `https://www.reddit.com/search.json?q=${encodeURIComponent(searchTerm)}&type=link&limit=10`;
-            const response = await fetch(url, {
-                method: 'GET',
-                headers: {
-                    'User-Agent': 'Webapp:GlobalSearchProject:v1.0.0 (by /u/OMG_gits_JSON_Bourne)'
-                }
-            });
+            const url = `https://api.spaceflightnewsapi.net/v4/articles/?search=${encodeURIComponent(searchTerm.trim())}&limit=10`;
+            const response = await fetch(url);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const data = await response.json();
-            return data.data.children.map(child => child.data);
+            return data.results;
         } catch (error) {
             return rejectWithValue(error.message);
         }

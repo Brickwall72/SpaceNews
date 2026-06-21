@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div id="App">
-      <h1>Vite + React</h1>
+      <h1>Space News</h1>
       <SearchBar />
       <Results />
     </div>

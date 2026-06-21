@@ -6,14 +6,49 @@
     border-radius: 10px;
     width: 800px;
     max-width: 90%;
-    height: 200px;
+    height: auto;
     padding: 10px;
     cursor: pointer;
     background-color: var(--tile-color);
+    overflow: hidden;
 }
 
 .Result:hover {
     background-color: color-mix(in srgb, var(--tile-color), white 1%);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     top: -1px;
+}
+
+.Result .article-title {
+    margin: 2px 0;
+    overflow-wrap: break-word;
+}
+
+.Result .article-source {
+    font-size: 1em;
+    margin: 4px 0;;
+}
+
+.Result .article-image {
+    width: 100%;
+    height: auto;
+    object-fit:contain;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    max-height: 300px;
+}
+
+.Result .summary {
+    display: none;
+    overflow-wrap: break-word;
+}
+
+.Result button {
+    display: none;
+}
+
+.Result a {
+    color: var(--text-color);
+    text-decoration: none;
+    pointer-events: none;
 }
