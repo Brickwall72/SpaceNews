@@ -4,7 +4,12 @@ import './SearchBar.css';
 const SearchBar = ({searchTerm, setSearchTerm, handleSearchChange, clearSearch}) => {
   const navigate = useNavigate();
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    if (e && e.preventDefault) e.preventDefault();
+    if (!searchTerm.trim()) return;
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
     navigate({
       pathname: '/search',
       search: `?q=${searchTerm}`
