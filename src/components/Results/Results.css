@@ -7,12 +7,14 @@
     overflow-y: scroll;
     height: 80vh;
     overflow-x: hidden;
+    max-width: 95%;
+    scrollbar-gutter: stable;
 }
 #Results::-webkit-scrollbar {
     width: 10px; /* width of the scrollbar */
     background: var(--tile-color);
     border-radius: 10px; /* roundness of the scrollbar */
-
+    margin-left: 10px;
 }
 #Results::-webkit-scrollbar-thumb {
     background-color: var(--text-color); /* color of the scrollbar thumb */
