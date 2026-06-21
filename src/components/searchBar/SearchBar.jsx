@@ -1,16 +1,10 @@
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router';
-import { fetchSearchResults, setSearchTerm as setStateSearchTerm } from '../../features/searchResultsSlice';
 import './SearchBar.css';
 
 const SearchBar = ({searchTerm, setSearchTerm, handleSearchChange, clearSearch}) => {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
 
   const handleSubmit = () => {
-    dispatch(fetchSearchResults(searchTerm));
-    dispatch(setStateSearchTerm(searchTerm));
     navigate({
       pathname: '/search',
       search: `?q=${searchTerm}`
