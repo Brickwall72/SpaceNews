@@ -13,9 +13,9 @@
     animation: scrollMarquee 240s linear infinite;
 }
 
-.image-carousel-track:hover {
+/* .image-carousel-track:hover {
     animation-play-state: paused;
-}
+} */
 
 .carousel-img {
     height: 300px;
